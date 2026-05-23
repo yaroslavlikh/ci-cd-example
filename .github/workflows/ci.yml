@@ -1,0 +1,16 @@
+name: testing
+on:
+  push:
+    branches: [main]
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout
+      - uses: actions/setup-python
+      - with:
+          python-version: 3.12
+      - run:
+          - pip install pytest pytest-cov
+          - pytest
+    checkout: 

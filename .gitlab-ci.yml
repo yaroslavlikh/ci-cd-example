@@ -1,7 +1,7 @@
 stages:
   - test
 pytest:
-  stagegit remote add origin https://gitlab.com/yaroslavlikh-group/ci-cd-example.gitgit push -uf origin main: test 
+  stage: test 
   image: python:3.12-slim
   script: 
     - pip install pytest pytest-cov
