@@ -6,10 +6,9 @@ jobs:
   pytest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout
-      - uses: actions/setup-python
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
           python-version: 3.12
-      - run: |
-          pip install pytest pytest-cov
-          pytest
+      - run: pip install pytest pytest-cov
+      - run: pytest
